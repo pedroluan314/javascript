@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        body{
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        var n1 = Number(window.prompt('Digite a primeira nota'))
+        var n2 = Number(window.prompt('Digite a segunda nota'))
+        var n3 = Number(window.prompt('Digite a terceira nota'))
+        var n4 = Number(window.prompt('Digite a quarta nota'))
+        var media = (n1 + n2 + n3 + n4) / 4
+        if (media >= 0 && media < 6) {
+            document.write(`Sua media é de ${media}. Já que a sua média esta entre 0 e 5 você esta de RECUPERAÇÃO. Estude Mais!!`)
+        }
+        else{
+            document.write(`Sua media é de ${media} Já que sua média esta acima de 6 você esta APROVADO. Parábens.`)
+        }
+
+    </script>
+</body>
+</html>
