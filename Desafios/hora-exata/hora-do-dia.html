@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Hora Certa</title>
+    <style>
+        body{
+            background-color: grey; 
+            font: normal 20pt arial;
+            color: white;
+        }
+        header{
+            text-align: center;
+        }
+        section{
+            background-color: white;
+            color: black;
+            height: 480px;
+            width: 800px;
+            border-radius: 20px;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%);
+            text-align: center;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.39);
+        }
+        img{
+            border-radius: 50%;
+        }
+        footer{
+            font-style: italic;
+            position: absolute;
+            top: 65%;
+            left: 43%;
+        }
+    </style>
+</head>
+<body>
+    <!--Cabeçcalho-->
+    <header>
+    <h1>Hora do Dia</h1>
+    </header>
+    <!--Conteudo-->
+    <section class="container">
+        <div>
+            <p id="msg">Horas</p>
+        </div>
+        <div>
+            <img id="imagem" src="" alt="">
+            <p class="bom"></p>
+        </div>
+    </section>
+    <!--Rodapé-->
+    <footer>
+        <p>@CursoemVideo</p>
+    </footer>
+
+    <script>
+        //cor da manhã: burlywood
+        //cor da tarde: peru
+        //cor da noite: rgb(28, 15, 46)
+        
+        var msg = window.document.getElementById('msg')
+        var img = window.document.getElementById('imagem')
+        var body = window.document.querySelector('body')
+        var data = new Date()
+        var hora = data.getHours()
+        var min = data.getMinutes()
+        var bom = window.document.querySelector('p.bom')
+        msg.innerHTML = `Agora são ${hora}:${min}`
+        if (hora >= 0 && hora <= 12){
+            bom.innerHTML = 'Bom Dia!'
+            body.style.background = 'burlywood'
+            img.src = 'Amanhecer01.jpg'
+        }
+        else if (hora >= 13 && hora < 18){
+            bom.innerHTML = 'Boa Tarde!'
+            body.style.background = 'peru'
+            img.src = 'pordosol02.jpg'
+        }else{
+            bom.innerHTML = "Boa Noite!"
+            body.style.background = 'rgb(28, 15, 46)'
+            img.src = 'noite03.jpg'
+        }
+    </script>
+</body>
+</html>

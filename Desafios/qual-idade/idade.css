@@ -1,0 +1,29 @@
+body{
+    font: normal 20pt arial;
+    background-color: rgb(56, 158, 199);
+}
+header{
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    width: 700px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.322);
+}
+input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#return{
+    text-align: center;
+}
+footer{
+    text-align: center;
+    padding: 7px;
+    color: white;
+}
